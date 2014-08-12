@@ -1,5 +1,6 @@
 Basic usage of liquid microsite system
 
+This is test !
 
 Tags :
 {% image_path [image name] %}
