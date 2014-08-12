@@ -1,0 +1,478 @@
+<style>
+.fontFamilyDetailHeader.familyHeaderBg {
+  /* image used as background in family detail header */
+  /* search for Neacademia_header-background.jpg in family images folder, then in common
+  images folder */
+  background-color: #204c58;
+  background-image:url("{% image_path Neacademia_header-background_640x390.jpg %}");
+  background-position:50% 50%;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover
+}
+@media screen and (min-width: 640px) {
+  .fontFamilyDetailHeader.familyHeaderBg {
+    background-image:url("{% image_path Neacademia_header-background_1536x936.jpg %}");
+  }
+}
+@media screen and (min-width: 1536px) {
+  .fontFamilyDetailHeader.familyHeaderBg {
+    background-image:url("{% image_path Neacademia_header-background.jpg %}");
+  }
+}
+.fontFamilyDetailAbout.familyBg {
+  /* image used as background in about family section */
+  background-color: #204c58;
+  background-image:url("{% image_path Neacademia_about-background_640x323.jpg %}");
+  background-position:50% 100%;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;
+  background-repeat:no-repeat
+}
+@media screen and (min-width: 640px) {
+  .fontFamilyDetailAbout.familyBg {
+    background-image:url("{% image_path Neacademia_about-background_1536x776.jpg %}");
+  }
+}
+@media screen and (min-width: 1536px) {
+  .fontFamilyDetailAbout.familyBg {
+    background-image:url("{% image_path Neacademia_about-background.jpg %}");
+  }
+}
+</style>
+
+<div class="fontFamilyDetailHeader familyHeaderBg">
+  <div class="inner">
+    <a href="#font-family-preview" class="imageContainer js-slideTo">
+      <img src="{% image_path Neacademia_header.svg %}" alt="Neacademia">
+    </a>
+  </div>
+</div>
+<div class="greyBackground">
+  <div class="fontFamilyDetailPreview">
+    <div class="inner">
+      <div class="tabContainer linkedWithFontFamilyDetailNavigation" id="font-family-preview">
+        <div class="tabControlsWrapper">
+          <div class="inner">
+            <div class="tabControl active" data-tabcontentselector=".js-tab1">
+              <div class="innerText">Latin</div>
+            </div>
+            <div class="tabControl" data-tabcontentselector=".js-tab2">
+              <div class="innerText">Cyrillic</div>
+            </div>
+          </div>
+        </div>
+         <div class="tabContentWrapper">
+          <div class="tabContent active js-tab1">
+            <div class="imgWrapper">
+              <img src="{% image_path Neacademia_specimen_1.svg %}" alt="" class="svg">
+            </div>
+          </div>
+          <div class="tabContent js-tab2">
+            <div class="imgWrapper">
+              <img src="{% image_path Neacademia_specimen_2.svg %}" alt="" class="svg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fontFamilyDetailAbout familyBg linkedWithFontFamilyDetailNavigation" id="font-family-about">
+    <div class="inner">
+      <div class="header">
+        <h2>about neacademia</h2>
+      </div>
+      <div class="halvesCols" itemprop="description">
+        <div class="halfCol">
+          <p>
+          Neacademia is a Latin and Cyrillic type family inspired by the types
+          cut by 15th century Italian punchcutter Francesco Griffo for the
+          famous Venetian printer and publisher Aldus Manutius. The family
+          comprises different versions optimised for specific point sizes, as
+          was traditional in metal type. While the display sizes maintain a
+          visual link to calligraphic roots, text sizes exhibit more
+          typographic qualities, following the hand of the carver, not the
+          calligrapher.
+          </p>
+        </div>
+        <div class="halfCol">
+          <p>
+          Neacademia was designed with specific allowances for letterpress
+          photopolymer printing. Printed digitally, it can tolerate – and even
+          benefit from – low resolution, rough paper, and low-grade presswork.
+          It also adopts a more traditional approach to kerning and
+          caps-spacing – instead of a multitude of kerning pairs, it makes use
+          of alternative contextual letterforms. In many ways, it feels like
+          using metal type again!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fontFamilyDetailAward linkedWithFontFamilyDetailNavigation" id="font-family-awards">
+  <div class="inner">
+    <div class="header">
+      <h2>awards</h2>
+    </div>
+
+    <div class="awardsWraper onFontFamilyDetail">
+      <div class="inner">
+        {% award "year": 2009, "logo": "Award-logo_ModernCyrillic09.svg" %}
+        Modern Cyrillic
+        {% endaward %}
+
+        {% award "year": 2012, "logo": "Award-logo_Typographica_2x.png", "width": 70, "height": 70 %}
+        Typographica’s Best of
+        {% endaward %}
+      </div>
+    </div>
+    <div class="controls">
+        <a href="#prev" class="slideLeftLink" style="display: none;">
+          <i class="ico arrowLeft"></i>
+          <span class="text">Prev</span>
+        </a>
+        <a href="#next" class="slideRightLink" style="display: none;">
+          <i class="ico arrowRight"></i>
+          <span class="text">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="linkedWithFontFamilyDetailNavigation" id="font-family-testimonials">
+  <div class="testimonialAccordion onFontFamilyDetail">
+    <div class="inner">
+      {% testimonial "i": 1, "active": true, "author": "Florian Hardwig", "for": "for Typographica", "logo": "Testimonial-logo_Typographica_2x.png", "width": 84, "height": 100 %}
+      “Do we need yet another Aldine revival? If it is as spirited and well-executed as this one – oh yes, please!”
+      {% endtestimonial %}
+      {% testimonial "i": 2, "author": "Florian Hardwig", "for": "for Typographica", "logo": "Testimonial-logo_Typographica_2x.png", "width": 84, "height": 100 %}
+      “If you still ask yourself whether this might be a good addition to your library, typeset the question in Neacademia – you will love that question mark!”
+      {% endtestimonial %}
+    </div>
+  </div>
+</div>
+
+<!-- include font tester in this section -->
+{% font_tester %}
+
+<div class="fontStylesSection linkedWithFontFamilyDetailNavigation" id="font-family-styles">
+  <h2>Styles</h2>
+  <div class="inner js-fontStyleItemKinetic">
+    <div class="fontStyleItemWrapper">
+      <div class="inner">
+        <div class="fontStyleItem">
+          <div class="header">
+            <div class="title">text latin</div>
+            <div class="availableLanguagesLabel js-languagePopover">
+              <span class="innerText">{% language_count_for latin %}</span>
+              <div class="popOverContent">
+                <a href="#" class="js-closePopover closeLink">
+                  <i class="ico close"></i>
+                  <span class="text">Close</span>
+                </a>
+                <div class="popOverTitle">Latin ({% language_count_for latin %})</div>
+                <div class="popOverText">
+                  {% languages_for_script latin %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <img src="{% image_path Neacademia_styles_1.svg %}" alt="" class="svg">
+          </div>
+        </div>
+        <div class="fontStyleItem">
+          <div class="header">
+            <div class="title">text cyrillic</div>
+            <div class="availableLanguagesLabel js-languagePopover">
+              <span class="innerText">{% language_count_for cyrillic %}</span>
+              <div class="popOverContent">
+                <a href="#" class="js-closePopover closeLink">
+                  <i class="ico close"></i>
+                  <span class="text">Close</span>
+                </a>
+                <div class="popOverTitle">Cyrillic ({% language_count_for cyrillic %})</div>
+                <div class="popOverText">
+                  {% languages_for_script cyrillic %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <img src="{% image_path Neacademia_styles_2.svg %}" alt="" class="svg">
+          </div>
+        </div>
+        <div class="fontStyleItem">
+          <div class="header">
+            <div class="title">display latin</div>
+            <div class="availableLanguagesLabel js-languagePopover">
+              <span class="innerText">{% language_count_for latin %}</span>
+              <div class="popOverContent">
+                <a href="#" class="js-closePopover closeLink">
+                  <i class="ico close"></i>
+                  <span class="text">Close</span>
+                </a>
+                <div class="popOverTitle">Latin ({% language_count_for latin %})</div>
+                <div class="popOverText">
+                  {% languages_for_script latin %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <img src="{% image_path Neacademia_styles_3.svg %}" alt="" class="svg">
+          </div>
+        </div>
+        <div class="fontStyleItem">
+          <div class="header">
+            <div class="title">display cyrillic</div>
+            <div class="availableLanguagesLabel js-languagePopover">
+              <span class="innerText">{% language_count_for cyrillic %}</span>
+              <div class="popOverContent">
+                <a href="#" class="js-closePopover closeLink">
+                  <i class="ico close"></i>
+                  <span class="text">Close</span>
+                </a>
+                <div class="popOverTitle">Cyrillic ({% language_count_for cyrillic %})</div>
+                <div class="popOverText">
+                  {% languages_for_script cyrillic %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <img src="{% image_path Neacademia_styles_4.svg %}" alt="" class="svg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hintSection">
+      <div class="large red solidButton desktop"> tap to move</div>
+      <div class="large red solidButton touchDevices"> Grab to move</div>
+    </div>
+    <div class="controls">
+      <a href="#prev" class="slideLeftLink" style="display: none;">
+        <i class="ico arrowLeft"></i>
+        <span class="text">Prev</span>
+      </a>
+      <a href="#next" class="slideRightLink">
+        <i class="ico arrowRight"></i>
+        <span class="text">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="fontStylesHighlights linkedWithFontFamilyDetailNavigation" id="font-family-highlights">
+  <div class="inner">
+    <div class="header">
+      <h2>highlights</h2>
+    </div>
+    <div class="cols">
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Neacademia_highlights_1.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Smaller x-height with elegant extenders makes Neacademia an excellent book face
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Neacademia_highlights_2.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Contextual alternates improve spacing and make the reading experience exciting
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Neacademia_highlights_3.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Different versions of the typeface optimised for specific point sizes as in metal type
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Neacademia_highlights_4.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Neacademia features working small caps in both Latin and Cyrillic
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fontStylesOpentypeFeatures">
+  <div class="inner">
+    <div class="header">
+      <h2>opentype features</h2>
+      <div class="text"><a href="/help">See how to use</a> OpenType features in your favourite application.</div>
+    </div>
+    <div class="otfCols">
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Neacademia_features_1.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Ligatures</div>
+            </div>
+            <div class="col">
+              <div class="text">Discretionary ligatures</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Neacademia_features_3.svg %}" alt="" class="svg">
+          <div class="text">Contextual alternates (many!)</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Neacademia_features_5.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Lining tabular figures</div>
+            </div>
+            <div class="col">
+              <div class="text">Ranging tabular figures</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Neacademia_features_7.svg %}" alt="" class="svg">
+          <div class="text">All caps &amp; case-sensitive punctuation</div>
+        </div>
+      </div>
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Neacademia_features_2.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Turkish/Azeri/Crimean Tatar</div>
+            </div>
+            <div class="col">
+              <div class="text">Romanian/Moldavian</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Neacademia_features_4.svg %}" alt="" class="svg">
+          <div class="text">Historical swashes (stylistic set 2, italic only)</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Neacademia_features_6.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Ordinals</div>
+            </div>
+            <div class="col">
+              <div class="text">Small caps (regular only)</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Neacademia_features_8.svg %}" alt="" class="svg">
+          <div class="text">Ornaments</div>
+        </div>
+      </div>
+    </div>
+    <div class="moreSection">
+      <a href="#hiddenOpentypeFeatures" class="button js-showMoreLink" data-showmoreselector="#hiddenOpentypeFeatures">
+      <i class="ico doubleArrowDown"></i>
+      Show more</a>
+    </div>
+    <div class="otfCols" style="display: none;" id="hiddenOpentypeFeatures">
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Neacademia_features_9.svg %}" alt="" class="svg">
+          <div class="text">Serbian/Macedonian forms (language feature or stylistic set 7)</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Neacademia_features_11.svg %}" alt="" class="svg">
+          <div class="text">Contextual alternates (also many!)</div>
+        </div>
+      </div>
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Neacademia_features_10.svg %}" alt="" class="svg">
+          <div class="text">Alternative form of italic ef (stylistic set 1, italic only)</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Neacademia_features_12.svg %}" alt="" class="svg">
+          <div class="text">Cyrillic small caps (regular only)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- web performace will be added to this section -->
+{% web_performance %}
+The fonts have been screen-optimized (hinted) and perform well in large text and display sizes across all browsers which support @font-face CSS rule.
+{% endweb_performance %}
+
+<div class="fontFamilyDownloadSection linkedWithFontFamilyDetailNavigation" id="font-family-docs">
+  <div class="inner">
+    <div class="cols">
+      <div class="col1">
+        {% charsets_selector %}
+      </div>
+      <div class="gutter">
+        <img src="{% image_path separatorX.png %}" alt="" class="separatorX">
+      </div>
+      <div class="col2">
+        <div class="pdfSpeicmen">
+          <h2>pdf specimen</h2>
+          <div class="text">For you to print out</div>
+          <div class="bottom">
+            <!-- file path search for Neacademia_specimen.pdf in family files folder -->
+            <a href="{% file_path Neacademia_specimen.pdf %}" class="large button">
+              <i class="ico file"></i>
+              <span class="text">Download PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fontFamilyBuySection">
+  <div class="inner">
+    <!-- create button for family with lowest price available -->
+    {% buy_button %}
+    <div class="groupLinksWrapper">
+      <div class="inner">
+        <a href="#socialMediaButtonInBuySection" class="groupLink js-showMoreInBuySection">Share</a>
+        <a href="#hiddenQuestionForm" class="groupLink js-showMoreInBuySection">Ask  question</a>
+      </div>
+    </div>
+    <div class="socialMediaSection hiddenContent" id="socialMediaButtonInBuySection" style="display: none;">
+      <div class="inner">
+        <h2>Share</h2>
+        <div class="socialMediaLinks">
+          {% share_buttons https://www.behance.net/gallery/2737683/Neacademia %}
+        </div>
+      </div>
+    </div>
+    <div class="hiddenContent" id="hiddenQuestionForm" style="display: none;">
+        <div class="faqFormSection inFontFamilyBuySection">
+  <div class="inner">
+    <div class="header"><h2>ask us now</h2></div>
+    <!-- create contact form -->
+    {% ask_us_now_form %}
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+{% designers_info %}

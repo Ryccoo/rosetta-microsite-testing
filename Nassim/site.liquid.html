@@ -1,0 +1,418 @@
+<style>
+.fontFamilyDetailHeader.familyHeaderBg {
+  /* image used as background in family detail header */
+  /* search for Nassim_header-background.jpg in family images folder, then in common
+  images folder */
+  background-color: #bb0805;
+  background-image:url("{% image_path Nassim_header-background_640x390.jpg %}");
+  background-position:50% 50%;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover
+  }
+  @media screen and (min-width: 640px) {
+    .fontFamilyDetailHeader.familyHeaderBg {
+      background-image:url("{% image_path Nassim_header-background_1536x936.jpg %}");
+    }
+  }
+  @media screen and (min-width: 1536px) {
+    .fontFamilyDetailHeader.familyHeaderBg {
+      background-image:url("{% image_path Nassim_header-background.jpg %}");
+    }
+  }
+
+.fontFamilyDetailAbout.familyBg {
+  /* image used as background in about family section */
+  background-color: #bb0805;
+  background-image:url("{% image_path Nassim_about-background_640x323.jpg %}");
+  background-position:50% 100%;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;
+  background-repeat:no-repeat
+}
+@media screen and (min-width: 640px) {
+  .fontFamilyDetailAbout.familyBg {
+    background-image:url("{% image_path Nassim_about-background_1536x776.jpg %}");
+  }
+}
+@media screen and (min-width: 1536px) {
+  .fontFamilyDetailAbout.familyBg {
+    background-image:url("{% image_path Nassim_about-background.jpg %}");
+  }
+}
+</style>
+
+<div class="fontFamilyDetailHeader familyHeaderBg">
+  <div class="inner">
+    <a href="#font-family-preview" class="imageContainer js-slideTo">
+      <img src="{% image_path Nassim_header.svg %}" alt="Nassim">
+    </a>
+  </div>
+</div>
+<div class="greyBackground">
+  <div class="fontFamilyDetailPreview">
+    <div class="inner">
+      <div class="tabContainer linkedWithFontFamilyDetailNavigation" id="font-family-preview">
+        <div class="tabControlsWrapper">
+          <div class="inner">
+            <div class="tabControl active" data-tabcontentselector=".js-tab1">
+              <div class="innerText">Latin</div>
+            </div>
+            <div class="tabControl" data-tabcontentselector=".js-tab2">
+              <div class="innerText">Arabic</div>
+            </div>
+          </div>
+        </div>
+         <div class="tabContentWrapper">
+          <div class="tabContent active js-tab1">
+            <div class="imgWrapper">
+              <img src="{% image_path Nassim_specimen_1.svg %}" alt="" class="svg">
+            </div>
+          </div>
+          <div class="tabContent js-tab2">
+            <div class="imgWrapper">
+              <img src="{% image_path Nassim_specimen_2.svg %}" alt="" class="svg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fontFamilyDetailAbout familyBg linkedWithFontFamilyDetailNavigation" id="font-family-about">
+    <div class="inner">
+      <div class="header">
+        <h2>about nassim</h2>
+      </div>
+      <div class="halvesCols" itemprop="description">
+        <div class="halfCol">
+          <p>
+            Nassim is a contemporary text typeface for the Arabic and Latin
+            scripts. Its core concept is a design that accomplishes superlative
+            multilingual text-setting – the main design concern being the
+            creation of an authentic design in which neither Arabic nor Latin
+            have to follow proportions or characteristics of the other script
+            in achieving balance and harmony. Used by the BBC and Voice of
+            America, the fonts are read by millions of people every month.
+          </p>
+        </div>
+        <div class="halfCol">
+          <p>
+          Nassim ranks among one of the most widely used webfonts today! Its
+          sturdy, modern, yet calligraphy-inspired shapes and classic
+          proportions make Nassim particularly suited for distinguished news
+          design. It lends itself equally well to general editorial and
+          magazine design with its versatility and range of weights – a
+          feature not commonly found in Arabic type families.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fontFamilyDetailAward linkedWithFontFamilyDetailNavigation" id="font-family-awards">
+  <div class="inner">
+    <div class="header">
+      <h2>awards</h2>
+    </div>
+
+    <div class="awardsWraper onFontFamilyDetail">
+      <div class="inner">
+        {% award "year": 2007, "logo": "Award-logo_TDC2.svg" %}
+        Certificate of Excellence<br>
+        in Type Design
+        {% endaward %}
+
+        {% award "year": 2007, "logo": "Award-logo_ED_Awards.svg" %}
+        First prize,<br>
+        European Design Awards
+        {% endaward %}
+
+        {% award "year": 2007, "logo": "Award-logo_Generic.svg" %}
+        Shortlisted for ‘Design of the Year’<br>
+        Design Museum London
+        {% endaward %}
+
+        {% award "year": 2011, "logo": "Award-logo_letter.2.svg" %}
+        Letter.2
+        {% endaward %}
+
+        {% award "year": 2012, "logo": "Award-logo_Typographica_2x.png", "width": 70, "height": 70 %}
+        Typographica’s Best of
+        {% endaward %}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="linkedWithFontFamilyDetailNavigation" id="font-family-testimonials">
+  <div class="testimonialAccordion onFontFamilyDetail">
+    <div class="inner">
+      {% testimonial "i": 1, "author": "Kutlu Çanlıoğlu", "company": "BBC Future Media", "logo": "Testimonial-logo_BBC.png", "width": 162, "height": 100 %}
+      “The many prestigious design awards that Nassim has received are testaments to its fresh and contemporary design, and with its range of weights enabled us to achieve the typographic hierarchy we required.”
+      {% endtestimonial %}
+
+      {% testimonial "i": 2, "author": "Mario Garcia", "company": "Garcia Media" %}
+      “Nassim was designed to work in small sizes, in a dictionary, say, or newspaper columns—a rare achievement. With five weights and perfectly matched Latin letters, it’s almost
+      too good to be true.”
+      {% endtestimonial %}
+
+      {% testimonial "i": 3, "active": true, "author": "Bruce Bahmani", "company": "Garcia Media", "logo": "Testimonial-logo_VoiceOfAmerica.svg" %}
+      “You have no idea what you have done for the improvement of the Arabic/Persian web experience.”
+      {% endtestimonial %}
+
+      {% testimonial "i": 4, "author": "Bruce Bahmani", "company": "Garcia Media" %}
+      “… the results demonstrated a 5x increase in reading speed. … The new Persian VOA site was extremely well received and many users commented on how much better the site looks and how much more readable the text appears; …”
+      {% endtestimonial %}
+
+      {% testimonial "i": 5, "author": "Thierry Blancpain (Grilli Type)", "for": "for Typographica", "logo": "Testimonial-logo_Typographica_2x.png", "width": 84, "height": 100 %}
+      “Nassim reads The Economist, not the Daily News; it has an opinion and sticks to it.”
+      {% endtestimonial %}
+    </div>
+  </div>
+</div>
+
+<!-- include font tester in this section -->
+{% font_tester %}
+
+<div class="fontStylesSection linkedWithFontFamilyDetailNavigation" id="font-family-styles">
+  <h2>Styles</h2>
+  <div class="inner js-fontStyleItemKinetic">
+    <div class="fontStyleItemWrapper">
+      <div class="inner">
+        <div class="fontStyleItem">
+          <div class="header">
+            <div class="title">latin</div>
+            <div class="availableLanguagesLabel js-languagePopover">
+              <span class="innerText">{% language_count_for latin %}</span>
+              <div class="popOverContent">
+                <a href="#" class="js-closePopover closeLink">
+                  <i class="ico close"></i>
+                  <span class="text">Close</span>
+                </a>
+                <div class="popOverTitle">Latin ({% language_count_for latin %})</div>
+                <div class="popOverText">
+                  {% languages_for_script latin %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <img src="{% image_path Nassim_styles_1.svg %}" alt="" class="svg">
+          </div>
+        </div>
+        <div class="fontStyleItem">
+          <div class="header">
+            <div class="title">arabic</div>
+            <div class="availableLanguagesLabel js-languagePopover">
+              <span class="innerText">{% language_count_for arabic %}</span>
+              <div class="popOverContent">
+                <a href="#" class="js-closePopover closeLink">
+                  <i class="ico close"></i>
+                  <span class="text">Close</span>
+                </a>
+                <div class="popOverTitle">Arabic ({% language_count_for arabic %})</div>
+                <div class="popOverText">
+                  {% languages_for_script arabic %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <img src="{% image_path Nassim_styles_2.svg %}" alt="" class="svg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hintSection">
+      <div class="large red solidButton desktop"> tap to move</div>
+      <div class="large red solidButton touchDevices"> Grab to move</div>
+    </div>
+    <div class="controls">
+      <a href="#prev" class="slideLeftLink" style="display: none;">
+        <i class="ico arrowLeft"></i>
+        <span class="text">Prev</span>
+      </a>
+      <a href="#next" class="slideRightLink">
+        <i class="ico arrowRight"></i>
+        <span class="text">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="fontStylesHighlights linkedWithFontFamilyDetailNavigation" id="font-family-highlights">
+  <div class="inner">
+    <div class="header">
+      <h2>highlights</h2>
+    </div>
+    <div class="cols">
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Nassim_highlights_1.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Newspaper proportions with tall x-height and condensed width
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Nassim_highlights_2.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            The Arabic follows typical Naskh conventions
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Nassim_highlights_3.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Contemporary style with angular modulation, asymmetrical serifs, and open counters
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Nassim_highlights_4.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Maximized shape disambiguation for improved legibility in Arabic
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="fontStylesOpentypeFeatures">
+  <div class="inner">
+    <div class="header">
+      <h2>opentype features</h2>
+      <div class="text"><a href="/help">See how to use</a> OpenType features in your favourite application.</div>
+    </div>
+    <div class="otfCols">
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Nassim_features_1.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Ligatures</div>
+            </div>
+            <div class="col">
+              <div class="text">Romanian/Moldavian</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Nassim_features_3.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Discretionary ligatures</div>
+            </div>
+            <div class="col">
+              <div class="text">Urdu contextual alternates</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Nassim_features_5.svg %}" alt="" class="svg">
+          <div class="text">Mark positioning</div>
+        </div>
+      </div>
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Nassim_features_2.svg %}" alt="" class="svg">
+          <div class="text">Case-sensitive punctuation</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Nassim_features_4.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Urdu figures (lang. feature)</div>
+            </div>
+            <div class="col">
+              <div class="text">Persian figures</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Nassim_features_6.svg %}" alt="" class="svg">
+          <div class="text">Correct Hijra date (Arabic-only)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- web performace will be added to this section -->
+{% web_performance %}
+The fonts have been screen-optimised and perform well in text and display sizes across all browsers which support @font-face CSS rule.
+{% endweb_performance %}
+
+<div class="fontFamilyDownloadSection linkedWithFontFamilyDetailNavigation" id="font-family-docs">
+  <div class="inner">
+    <div class="cols">
+      <div class="col1">
+        {% charsets_selector %}
+      </div>
+      <div class="gutter">
+        <img src="{% image_path separatorX.png %}" alt="" class="separatorX">
+      </div>
+      <div class="col2">
+        <div class="pdfSpeicmen">
+          <h2>pdf specimen</h2>
+          <div class="text">For you to print out</div>
+          <div class="bottom">
+            <!-- file path search for Nassim_specimen.pdf in family files folder -->
+            <a href="{% file_path Nassim_specimen.pdf %}" class="large button">
+              <i class="ico file"></i>
+              <span class="text">Download PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fontFamilyBuySection">
+  <div class="inner">
+    <!-- create button for family with lowest price available -->
+    {% buy_button %}
+    <div class="groupLinksWrapper">
+      <div class="inner">
+        <a href="#socialMediaButtonInBuySection" class="groupLink js-showMoreInBuySection">Share</a>
+        <a href="#hiddenQuestionForm" class="groupLink js-showMoreInBuySection">Ask  question</a>
+      </div>
+    </div>
+    <div class="socialMediaSection hiddenContent" id="socialMediaButtonInBuySection" style="display: none;">
+      <div class="inner">
+        <h2>Share</h2>
+        <div class="socialMediaLinks">
+          {% share_buttons https://www.behance.net/gallery/2737569/Nassim %}
+        </div>
+      </div>
+    </div>
+    <div class="hiddenContent" id="hiddenQuestionForm" style="display: none;">
+        <div class="faqFormSection inFontFamilyBuySection">
+  <div class="inner">
+    <div class="header"><h2>ask us now</h2></div>
+    <!-- create contact form -->
+    {% ask_us_now_form %}
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+{% designers_info %}
+
+{% fonts_in_use %}
+  Mauritania
+  BBC-news-portal
+  Voice-of-America
+  Mahdavi-catalogue
+{% endfonts_in_use%}

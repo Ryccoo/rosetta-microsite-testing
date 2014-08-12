@@ -1,0 +1,470 @@
+<style>
+.fontFamilyDetailHeader.familyHeaderBg {
+  /* image used as background in family detail header */
+  /* search for Aisha_header-background.jpg in family images folder, then in common
+  images folder */
+  background-color: #a75820;
+  background-image:url("{% image_path Aisha_header-background_640x390.jpg %}");
+  background-position:50% 50%;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover
+}
+@media screen and (min-width: 640px) {
+  .fontFamilyDetailHeader.familyHeaderBg {
+    background-image:url("{% image_path Aisha_header-background_1536x963.jpg %}");
+  }
+}
+@media screen and (min-width: 1536px) {
+  .fontFamilyDetailHeader.familyHeaderBg {
+    background-image:url("{% image_path Aisha_header-background.jpg %}");
+  }
+}
+.fontFamilyDetailAbout.familyBg {
+  /* image used as background in about family section */
+  background-color: #a75820;
+  background-image:url("{% image_path Aisha_about-background_640x323.jpg %}");
+  background-position:50% 100%;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;
+  background-repeat:no-repeat
+}
+@media screen and (min-width: 640px) {
+  .fontFamilyDetailAbout.familyBg {
+    background-image:url("{% image_path Aisha_about-background_1536x776.jpg %}");
+  }
+}
+@media screen and (min-width: 1536px) {
+  .fontFamilyDetailAbout.familyBg {
+    background-image:url("{% image_path Aisha_about-background.jpg %}");
+  }
+}
+</style>
+
+<div class="fontFamilyDetailHeader familyHeaderBg">
+  <div class="inner">
+    <a href="#font-family-preview" class="imageContainer js-slideTo">
+      <img src="{% image_path Aisha_header.svg %}" alt="Aisha">
+    </a>
+  </div>
+</div>
+<div class="greyBackground">
+  <div class="fontFamilyDetailPreview">
+    <div class="inner">
+      <div class="tabContainer linkedWithFontFamilyDetailNavigation" id="font-family-preview">
+        <div class="tabControlsWrapper">
+          <div class="inner">
+            <div class="tabControl active" data-tabcontentselector=".js-tab1">
+              <div class="innerText">Latin</div>
+            </div>
+            <div class="tabControl" data-tabcontentselector=".js-tab2">
+              <div class="innerText">Arabic</div>
+            </div>
+          </div>
+        </div>
+         <div class="tabContentWrapper">
+          <div class="tabContent active js-tab1">
+            <div class="imgWrapper">
+              <img src="{% image_path Aisha_specimen_1.svg %}" alt="" class="svg">
+            </div>
+          </div>
+          <div class="tabContent js-tab2">
+            <div class="imgWrapper">
+              <img src="{% image_path Aisha_specimen_2.svg %}" alt="" class="svg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fontFamilyDetailAbout familyBg linkedWithFontFamilyDetailNavigation" id="font-family-about">
+    <div class="inner">
+      <div class="header">
+        <h2>about aisha</h2>
+      </div>
+      <div class="halvesCols" itemprop="description">
+        <div class="halfCol">
+          <p>
+          Aisha originated from research about the Maghribi script – its
+          regular Arabic weight is based on the foundry type Titus discovered
+          in a 19th century book. In the process of design Titus reinterpreted
+          the sources within the framework provided by current usage and
+          technology. He developed a Latin face to accompany the Arabic,
+          drawing both as independently usable, yet closely related typefaces.
+          </p>
+        </div>
+        <div class="halfCol">
+          <p>
+          The Latin version of Aisha is one of the designs where the style of
+          the Arabic version shaped the direction for the Roman letters, rather
+          than the other way around. Drawing on research around Maghribi
+          calligraphy, and inspired by expressive Moroccan lettering, the
+          resulting designs feature generous curves and joyful variations,
+          rendering Aisha a historically informed typeface for contemporary
+          requirements, with a wide range of weights in both Arabic and Latin.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fontFamilyDetailAward linkedWithFontFamilyDetailNavigation" id="font-family-awards">
+  <div class="inner">
+    <div class="header">
+      <h2>awards</h2>
+    </div>
+
+    <div class="awardsWraper onFontFamilyDetail">
+      <div class="inner">
+        {% award "year": 2010, "logo": "Award-logo_TDC2.svg" %}
+        Certificate of Excellence<br>in Type Design
+        {% endaward %}
+
+        {% award "year": 2011, "logo": "Award-logo_Generic.svg" %}
+        Nominated for the Design Award of the Federal Republic of Germany
+        {% endaward %}
+
+        {% award "year": 2011, "logo": "Award-logo_CreativeReview_2x.png", "width": 70, "height": 70 %}
+        Creative Review Type Annual
+        {% endaward %}
+      </div>
+      <div class="controls">
+        <a href="#prev" class="slideLeftLink" style="display: none;">
+          <i class="ico arrowLeft"></i>
+          <span class="text">Prev</span>
+        </a>
+        <a href="#next" class="slideRightLink" style="display: none;">
+          <i class="ico arrowRight"></i>
+          <span class="text">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="linkedWithFontFamilyDetailNavigation" id="font-family-testimonials">
+  <div class="testimonialAccordion onFontFamilyDetail">
+    <div class="inner">
+      {% testimonial "i": 1, "author": "A. Giménez Reíllo" %}
+      “Y no hace falta ser un entendido en tipografía árabe, creo, para concluir que Aisha es de lo mejorcito en un género, el de las fundiciones árabes de estilo magrebí, …”
+      {% endtestimonial %}
+
+      {% testimonial "i": 2, "active": true, "author": "David Lemon", "company": "Adobe Type" %}
+      “Congrats on the reworked Aisha. Ranging figures seems – in hindsight – like a no-brainer for Arabic; great touch!”
+      {% endtestimonial %}
+
+      {% testimonial "i": 3, "author": "Jan Middendorp", "for": "for 8 Faces magazine" %}
+      “Titus Nemeth describes the model for Aisha as ‘curious and very playful’ — which is exactly what makes Aisha so attractive. The loopy, brush-like quality of the Arabic makes a smooth transition into the Latin version; both scripts exude a lively playfulness.”
+      {% endtestimonial %}
+    </div>
+  </div>
+</div>
+
+<!-- include font tester in this section -->
+{% font_tester %}
+
+<div class="fontStylesSection linkedWithFontFamilyDetailNavigation" id="font-family-styles">
+  <h2>Styles</h2>
+  <div class="inner js-fontStyleItemKinetic">
+    <div class="fontStyleItemWrapper">
+      <div class="inner">
+        <div class="fontStyleItem">
+          <div class="header">
+            <div class="title">latin</div>
+            <div class="availableLanguagesLabel js-languagePopover">
+              <span class="innerText">{% language_count_for latin %}</span>
+              <div class="popOverContent">
+                <a href="#" class="js-closePopover closeLink">
+                  <i class="ico close"></i>
+                  <span class="text">Close</span>
+                </a>
+                <div class="popOverTitle">Latin ({% language_count_for latin %})</div>
+                <div class="popOverText">
+                  {% languages_for_script latin %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <img src="{% image_path Aisha_styles_1.svg %}" alt="" class="svg">
+          </div>
+        </div>
+        <div class="fontStyleItem">
+          <div class="header">
+            <div class="title">arabic</div>
+            <div class="availableLanguagesLabel js-languagePopover">
+              <span class="innerText">{% language_count_for arabic %}</span>
+              <div class="popOverContent">
+                <a href="#" class="js-closePopover closeLink">
+                  <i class="ico close"></i>
+                  <span class="text">Close</span>
+                </a>
+                <div class="popOverTitle">Arabic ({% language_count_for arabic %})</div>
+                <div class="popOverText">
+                  {% languages_for_script arabic %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <img src="{% image_path Aisha_styles_2.svg %}" alt="" class="svg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hintSection">
+      <div class="large red solidButton desktop"> tap to move</div>
+      <div class="large red solidButton touchDevices"> Grab to move</div>
+    </div>
+    <div class="controls">
+      <a href="#prev" class="slideLeftLink" style="display: none;">
+        <i class="ico arrowLeft"></i>
+        <span class="text">Prev</span>
+      </a>
+      <a href="#next" class="slideRightLink">
+        <i class="ico arrowRight"></i>
+        <span class="text">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="fontStylesHighlights linkedWithFontFamilyDetailNavigation" id="font-family-highlights">
+  <div class="inner">
+    <div class="header">
+      <h2>highlights</h2>
+    </div>
+    <div class="cols">
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Aisha_highlights_1.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            The handwritten style creates an inviting and informal appearance
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Aisha_highlights_2.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Rich arsenal of forms inspired by Maghribi manuscript practice
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Aisha_highlights_3.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Many alternates and swashes allow for more tasty servings of your texts
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Aisha_highlights_4.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Aisha is the first typeface to support ranging figures for Arabic and Persian
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fontStylesOpentypeFeatures">
+  <div class="inner">
+    <div class="header">
+      <h2>opentype features</h2>
+      <div class="text"><a href="/help">See how to use</a> OpenType features in your favourite application.</div>
+    </div>
+    <div class="otfCols">
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Aisha_features_1.svg %}" alt="" class="svg">
+          <div class="text">Stylistic alternates (stylistic set 1–6)</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Aisha_features_3.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Catalan ldot (lang. feature)</div>
+            </div>
+            <div class="col">
+              <div class="text">Dutch long I (lang. feature)</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Aisha_features_5.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Lining figures</div>
+            </div>
+            <div class="col">
+              <div class="text">Tabular lining figures</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Aisha_features_7.svg %}" alt="" class="svg">
+          <div class="text">Ligatures</div>
+        </div>
+      </div>
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Aisha_features_2.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Ligatures</div>
+            </div>
+            <div class="col">
+              <div class="text">Turkish/Azeri/Crimean Tatar</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Aisha_features_4.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Fractions</div>
+            </div>
+            <div class="col">
+              <div class="text">Superiors &amp; inferiors</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Aisha_features_6.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Tabular old-style figures</div>
+            </div>
+            <div class="col">
+              <div class="text">Ordinals</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Aisha_features_8.svg %}" alt="" class="svg">
+          <div class="text">Discretionary ligatures</div>
+        </div>
+      </div>
+    </div>
+    <div class="moreSection">
+      <a href="#hiddenOpentypeFeatures" class="button js-showMoreLink" data-showmoreselector="#hiddenOpentypeFeatures">
+      <i class="ico doubleArrowDown"></i>
+      Show more</a>
+    </div>
+    <div class="otfCols" style="display: none;" id="hiddenOpentypeFeatures">
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Aisha_features_9.svg %}" alt="" class="svg">
+          <div class="text">Stylistic alternates (stylistic set 1–7)</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Aisha_features_11.svg %}" alt="" class="svg">
+          <div class="text">Mark positioning</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Aisha_features_13.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Ranging figures</div>
+            </div>
+            <div class="col">
+              <div class="text">Tabular lining figures</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Aisha_features_10.svg %}" alt="" class="svg">
+          <div class="text">And more stylistic alternates (stylistic set 1–7)</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Aisha_features_12.svg %}" alt="" class="svg">
+          <div class="text">Correct Hijra date (Arabic-only)</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Aisha_features_14.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Tabular ranging figures</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- web performace will be added to this section -->
+{% web_performance %}
+The fonts have been screen-optimized (hinted) and perform well in large text and display sizes across all browsers which support @font-face CSS rule.
+{% endweb_performance %}
+
+<div class="fontFamilyDownloadSection linkedWithFontFamilyDetailNavigation" id="font-family-docs">
+  <div class="inner">
+    <div class="cols">
+      <div class="col1">
+        {% charsets_selector %}
+      </div>
+      <div class="gutter">
+        <img src="{% image_path separatorX.png %}" alt="" class="separatorX">
+      </div>
+      <div class="col2">
+        <div class="pdfSpeicmen">
+          <h2>pdf specimen</h2>
+          <div class="text">For you to print out</div>
+          <div class="bottom">
+            <!-- file path search for Aisha_specimen.pdf in family files folder -->
+            <a href="{% file_path Aisha_specimen.pdf %}" class="large button">
+              <i class="ico file"></i>
+              <span class="text">Download PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fontFamilyBuySection">
+  <div class="inner">
+    <!-- create button for family with lowest price available -->
+    {% buy_button %}
+    <div class="groupLinksWrapper">
+      <div class="inner">
+        <a href="#socialMediaButtonInBuySection" class="groupLink js-showMoreInBuySection">Share</a>
+        <a href="#hiddenQuestionForm" class="groupLink js-showMoreInBuySection">Ask  question</a>
+      </div>
+    </div>
+    <div class="socialMediaSection hiddenContent" id="socialMediaButtonInBuySection" style="display: none;">
+      <div class="inner">
+        <h2>Share</h2>
+        <div class="socialMediaLinks">
+          {% share_buttons https://www.behance.net/gallery/2598479/Aisha %}
+        </div>
+      </div>
+    </div>
+    <div class="hiddenContent" id="hiddenQuestionForm" style="display: none;">
+        <div class="faqFormSection inFontFamilyBuySection">
+  <div class="inner">
+    <div class="header"><h2>ask us now</h2></div>
+    <!-- create contact form -->
+    {% ask_us_now_form %}
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+{% designers_info %}

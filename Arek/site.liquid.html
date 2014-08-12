@@ -1,0 +1,481 @@
+<style>
+.fontFamilyDetailHeader.familyHeaderBg {
+  /* image used as background in family detail header */
+  /* search for Arek_header-background.jpg in family images folder, then in common
+  images folder */
+  background-color: #a35a54;
+  background-image:url("{% image_path Arek_header-background_640x390.jpg %}");
+  background-position:50% 50%;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover
+}
+@media screen and (min-width: 640px) {
+  .fontFamilyDetailHeader.familyHeaderBg {
+    background-image:url("{% image_path Arek_header-background_1536x936.jpg %}");
+  }
+}
+@media screen and (min-width: 1536px) {
+  .fontFamilyDetailHeader.familyHeaderBg {
+    background-image:url("{% image_path Arek_header-background.jpg %}");
+  }
+}
+.fontFamilyDetailAbout.familyBg {
+  /* image used as background in about family section */
+  background-color: #a35a54;
+  background-image:url("{% image_path Arek_about-background_640x323.jpg %}");
+  background-position:50% 100%;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;
+  background-repeat:no-repeat
+}
+@media screen and (min-width: 640px) {
+  .fontFamilyDetailAbout.familyBg {
+    background-image:url("{% image_path Arek_about-background_1536x776.jpg %}");
+  }
+}
+@media screen and (min-width: 1536px) {
+  .fontFamilyDetailAbout.familyBg {
+    background-image:url("{% image_path Arek_about-background.jpg %}");
+  }
+}
+</style>
+
+<div class="fontFamilyDetailHeader familyHeaderBg">
+  <div class="inner">
+    <a href="#font-family-preview" class="imageContainer js-slideTo">
+      <img src="{% image_path Arek_header.svg %}" alt="Arek">
+    </a>
+  </div>
+</div>
+<div class="greyBackground">
+  <div class="fontFamilyDetailPreview">
+    <div class="inner">
+      <div class="tabContainer linkedWithFontFamilyDetailNavigation" id="font-family-preview">
+        <div class="tabControlsWrapper">
+          <div class="inner">
+            <div class="tabControl active" data-tabcontentselector=".js-tab1">
+              <div class="innerText">Latin</div>
+            </div>
+            <div class="tabControl" data-tabcontentselector=".js-tab2">
+              <div class="innerText">Armenian</div>
+            </div>
+          </div>
+        </div>
+         <div class="tabContentWrapper">
+          <div class="tabContent active js-tab1">
+            <div class="imgWrapper">
+              <img src="{% image_path Arek_specimen_1.svg %}" alt="" class="svg">
+            </div>
+          </div>
+          <div class="tabContent js-tab2">
+            <div class="imgWrapper">
+              <img src="{% image_path Arek_specimen_2.svg %}" alt="" class="svg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fontFamilyDetailAbout familyBg linkedWithFontFamilyDetailNavigation" id="font-family-about">
+    <div class="inner">
+      <div class="header">
+        <h2>about arek</h2>
+      </div>
+      <div class="halvesCols" itemprop="description">
+        <div class="halfCol">
+          <p>
+          Arek is Rosetta’s award-winning type family covering Latin and
+          Armenian. The design draws on extensive research in traditional
+          manuscripts, exploring and emphasising the distinctive, calligraphic
+          roots of Armenian. The highly original cursive style breaks new
+          ground in Armenian typography for the digital age, offering an
+          original secondary style for distinction and widening the existing
+          sylistic repertoire. Details such as serifs and terminal styles are
+          shared between Latin and Armenian.
+          </p>
+        </div>
+        <div class="halfCol">
+          <p>
+          The visual harmony is enhanced by common vertical proportions, and
+          the modest x-height in the Latin is sensitively engineered alongside
+          the Armenian. Originally designed for school books, Arek equips the
+          typographer with ten styles covering a wide range for editorial and
+          other challenging typesetting environments. The family also provides
+          expert features such as ligatures, lining and old-style figures, and
+          contextual alternates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fontFamilyDetailAward linkedWithFontFamilyDetailNavigation" id="font-family-awards">
+  <div class="inner">
+    <div class="header">
+      <h2>awards</h2>
+    </div>
+
+    <div class="awardsWraper onFontFamilyDetail">
+      <div class="inner">
+        {% award "year": 2010, "logo": "Award-logo_Granshan_2x.png", "width": 70, "height": 70 %}
+        First prize<br> Granshan (Armenian)
+        {% endaward %}
+
+        {% award "year": 2011, "logo": "Award-logo_letter.2.svg" %}
+        Letter.2
+        {% endaward %}
+
+        {% award "year": 2013, "logo": "Award-logo_Typographica_2x.png", "width": 70, "height": 70 %}
+        Typographica’s Best of
+        {% endaward %}
+      </div>
+      <div class="controls">
+          <a href="#prev" class="slideLeftLink" style="display: none;">
+            <i class="ico arrowLeft"></i>
+            <span class="text">Prev</span>
+          </a>
+          <a href="#next" class="slideRightLink" style="display: none;">
+            <i class="ico arrowRight"></i>
+            <span class="text">Next</span>
+          </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="linkedWithFontFamilyDetailNavigation" id="font-family-testimonials">
+  <div class="testimonialAccordion onFontFamilyDetail">
+    <div class="inner">
+      {% testimonial "i": 1, "active": true, "author": "Mark Jamra", "for": "for Typographica", "logo": "Testimonial-logo_Typographica_2x.png", "width": 84, "height": 100 %}
+      “It’s vivacious and playful in large sizes, and also full-proportioned, open, and effortlessly readable in text sizes, adding an undercurrent of frenetic energy to the flow of body copy.”
+      {% endtestimonial %}
+      {% testimonial "i": 2,"author": "Gegham Vardanyan", "company": "Yerevan magazine", "logo": "Testimonial-logo_Yerevan.svg" %}
+      “The Armenian typography has old history but it’s still too young compared to Latin computer fonts. There is not enough fonts for making layouts, and we are always looking for something interesting and new. So when I’ve accidentally found Arek it was a good luck for us.”
+      {% endtestimonial %}
+      {% testimonial "i": 3,"author": "Hrant H Papazian", "for": "for Typographica", "logo": "Testimonial-logo_Typographica_2x.png", "width": 84, "height": 100 %}
+      “… it melodiously announces that a multi-script typeface need have neither a servile non-Latin component, nor a Latin that’s either swiped or a generic afterthought.”
+      {% endtestimonial %}
+    </div>
+  </div>
+</div>
+
+<!-- include font tester in this section -->
+{% font_tester %}
+
+<div class="fontStylesSection linkedWithFontFamilyDetailNavigation" id="font-family-styles">
+  <h2>Styles</h2>
+  <div class="inner js-fontStyleItemKinetic">
+    <div class="fontStyleItemWrapper">
+      <div class="inner">
+        <div class="fontStyleItem">
+          <div class="header">
+            <div class="title">latin</div>
+            <div class="availableLanguagesLabel js-languagePopover">
+              <span class="innerText">{% language_count_for latin %}</span>
+              <div class="popOverContent">
+                <a href="#" class="js-closePopover closeLink">
+                  <i class="ico close"></i>
+                  <span class="text">Close</span>
+                </a>
+                <div class="popOverTitle">Latin ({% language_count_for latin %})</div>
+                <div class="popOverText">
+                  {% languages_for_script latin %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <img src="{% image_path Arek_styles_1.svg %}" alt="" class="svg">
+          </div>
+        </div>
+        <div class="fontStyleItem">
+          <div class="header">
+            <div class="title">latin italic</div>
+            <div class="availableLanguagesLabel js-languagePopover">
+              <span class="innerText">{% language_count_for latin %}</span>
+              <div class="popOverContent">
+                <a href="#" class="js-closePopover closeLink">
+                  <i class="ico close"></i>
+                  <span class="text">Close</span>
+                </a>
+                <div class="popOverTitle">Latin ({% language_count_for latin %})</div>
+                <div class="popOverText">
+                  {% languages_for_script latin %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <img src="{% image_path Arek_styles_2.svg %}" alt="" class="svg">
+          </div>
+        </div>
+        <div class="fontStyleItem">
+          <div class="header">
+            <div class="title">armenian</div>
+            <div class="availableLanguagesLabel js-languagePopover">
+              <span class="innerText">{% language_count_for armenian %}</span>
+              <div class="popOverContent">
+                <a href="#" class="js-closePopover closeLink">
+                  <i class="ico close"></i>
+                  <span class="text">Close</span>
+                </a>
+                <div class="popOverTitle">armenian ({% language_count_for armenian %})</div>
+                <div class="popOverText">
+                  {% languages_for_script armenian %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <img src="{% image_path Arek_styles_3.svg %}" alt="" class="svg">
+          </div>
+        </div>
+        <div class="fontStyleItem">
+          <div class="header">
+            <div class="title">armenian italic</div>
+            <div class="availableLanguagesLabel js-languagePopover">
+              <span class="innerText">{% language_count_for armenian %}</span>
+              <div class="popOverContent">
+                <a href="#" class="js-closePopover closeLink">
+                  <i class="ico close"></i>
+                  <span class="text">Close</span>
+                </a>
+                <div class="popOverTitle">armenian ({% language_count_for armenian %})</div>
+                <div class="popOverText">
+                  {% languages_for_script armenian %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <img src="{% image_path Arek_styles_4.svg %}" alt="" class="svg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hintSection">
+      <div class="large red solidButton desktop"> tap to move</div>
+      <div class="large red solidButton touchDevices"> Grab to move</div>
+    </div>
+    <div class="controls">
+      <a href="#prev" class="slideLeftLink" style="display: none;">
+        <i class="ico arrowLeft"></i>
+        <span class="text">Prev</span>
+      </a>
+      <a href="#next" class="slideRightLink">
+        <i class="ico arrowRight"></i>
+        <span class="text">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="fontStylesHighlights linkedWithFontFamilyDetailNavigation" id="font-family-highlights">
+  <div class="inner">
+    <div class="header">
+      <h2>highlights</h2>
+    </div>
+    <div class="cols">
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Arek_highlights_1.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Moderate x-height allows shared vertical proportions between Latin and Armenian
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Arek_highlights_2.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Strong calligraphic presence, with distinct serif and terminal styles
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Arek_highlights_3.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Arek is the first type system to incorporate an Armenian cursive
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Arek_highlights_4.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Contextual alternate characters enable more balanced word shapes
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="fontStylesOpentypeFeatures">
+  <div class="inner">
+    <div class="header">
+      <h2>opentype features</h2>
+      <div class="text"><a href="/help">See how to use</a> OpenType features in your favourite application.</div>
+    </div>
+    <div class="otfCols">
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Arek_features_1.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Ligatures</div>
+            </div>
+            <div class="col">
+              <div class="text">Discretionary ligatures</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Arek_features_3.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Lining figures</div>
+            </div>
+            <div class="col">
+              <div class="text">Tabular lining figures</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Arek_features_5.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Fractions</div>
+            </div>
+            <div class="col">
+              <div class="text">Superiors &amp; inferiors</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Arek_features_7.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Stylistic alternate</div>
+            </div>
+            <div class="col">
+              <div class="text">Arrows</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Arek_features_9.svg %}" alt="" class="svg">
+          <div class="text">Ligatures (always on)</div>
+        </div>
+      </div>
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Arek_features_2.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Turkish/Azeri/Crimean Tatar</div>
+            </div>
+            <div class="col">
+              <div class="text">Romanian/Moldavian</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Arek_features_4.svg %}" alt="" class="svg">
+          <div class="cols">
+            <div class="col">
+              <div class="text">Tabular old-style figures</div>
+            </div>
+            <div class="col">
+              <div class="text">Ordinals</div>
+            </div>
+          </div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Arek_features_6.svg %}" alt="" class="svg">
+          <div class="text">All caps &amp; case-sensitive punctuation</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Arek_features_8.svg %}" alt="" class="svg">
+          <div class="text">Bullets &amp; dingbats</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Arek_features_10.svg %}" alt="" class="svg">
+          <div class="text">Contextual alternates</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- web performace will be added to this section -->
+{% web_performance %}
+The fonts have been screen-optimized (auto-hinted) and perform well in large text and display sizes across all browsers which support @font-face CSS rule.
+{% endweb_performance %}
+
+<div class="fontFamilyDownloadSection linkedWithFontFamilyDetailNavigation" id="font-family-docs">
+  <div class="inner">
+    <div class="cols">
+      <div class="col1">
+        {% charsets_selector %}
+      </div>
+      <div class="gutter">
+        <img src="{% image_path separatorX.png %}" alt="" class="separatorX">
+      </div>
+      <div class="col2">
+        <div class="pdfSpeicmen">
+          <h2>pdf specimen</h2>
+          <div class="text">For you to print out</div>
+          <div class="bottom">
+            <!-- file path search for Arek_specimen.pdf in family files folder -->
+            <a href="{% file_path Arek_specimen.pdf %}" class="large button">
+              <i class="ico file"></i>
+              <span class="text">Download PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fontFamilyBuySection">
+  <div class="inner">
+    <!-- create button for family with lowest price available -->
+    {% buy_button %}
+    <div class="groupLinksWrapper">
+      <div class="inner">
+        <a href="#socialMediaButtonInBuySection" class="groupLink js-showMoreInBuySection">Share</a>
+        <a href="#hiddenQuestionForm" class="groupLink js-showMoreInBuySection">Ask  question</a>
+      </div>
+    </div>
+    <div class="socialMediaSection hiddenContent" id="socialMediaButtonInBuySection" style="display: none;">
+      <div class="inner">
+        <h2>Share</h2>
+        <div class="socialMediaLinks">
+          {% share_buttons https://www.behance.net/gallery/7473587/Arek %}
+        </div>
+      </div>
+    </div>
+    <div class="hiddenContent" id="hiddenQuestionForm" style="display: none;">
+        <div class="faqFormSection inFontFamilyBuySection">
+  <div class="inner">
+    <div class="header"><h2>ask us now</h2></div>
+    <!-- create contact form -->
+    {% ask_us_now_form %}
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+{% designers_info %}

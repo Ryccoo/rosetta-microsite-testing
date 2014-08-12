@@ -1,0 +1,419 @@
+<style>
+.fontFamilyDetailHeader.familyHeaderBg {
+  /* image used as background in family detail header */
+  /* search for Sutturah_header-background.jpg in family images folder, then in common
+  images folder */
+  background-color: #5e2c30;
+  background-image:url("{% image_path Sutturah_header-background_640x390.jpg %}");
+  background-position:50% 50%;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover
+}
+@media screen and (min-width: 640px) {
+  .fontFamilyDetailHeader.familyHeaderBg {
+    background-image:url("{% image_path Sutturah_header-background_1536x936.jpg %}");
+  }
+}
+@media screen and (min-width: 1536px) {
+  .fontFamilyDetailHeader.familyHeaderBg {
+    background-image:url("{% image_path Sutturah_header-background.jpg %}");
+  }
+}
+.fontFamilyDetailAbout.familyBg {
+  /* image used as background in about family section */
+  background-color: #5e2c30;
+  background-image:url("{% image_path Sutturah_about-background_640x323.jpg %}");
+  background-position:50% 100%;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;
+  background-repeat:no-repeat
+}
+@media screen and (min-width: 640px) {
+  .fontFamilyDetailAbout.familyBg {
+    background-image:url("{% image_path Sutturah_about-background_1536x776.jpg %}");
+  }
+}
+@media screen and (min-width: 1536px) {
+  .fontFamilyDetailAbout.familyBg {
+    background-image:url("{% image_path Sutturah_about-background.jpg %}");
+  }
+}
+</style>
+
+<div class="fontFamilyDetailHeader familyHeaderBg">
+  <div class="inner">
+    <a href="#font-family-preview" class="imageContainer js-slideTo">
+      <img src="{% image_path Sutturah_header.svg %}" alt="Sutturah">
+    </a>
+  </div>
+</div>
+<div class="greyBackground">
+  <div class="fontFamilyDetailPreview">
+    <div class="inner">
+      <div class="tabContainer linkedWithFontFamilyDetailNavigation" id="font-family-preview">
+        <div class="tabControlsWrapper">
+          <div class="inner">
+            <div class="tabControl active" data-tabcontentselector=".js-tab1">
+              <div class="innerText">Latin</div>
+            </div>
+            <div class="tabControl" data-tabcontentselector=".js-tab2">
+              <div class="innerText">Cyrillic</div>
+            </div>
+          </div>
+        </div>
+         <div class="tabContentWrapper">
+          <div class="tabContent active js-tab1">
+            <div class="imgWrapper">
+              <img src="{% image_path Sutturah_specimen_1.svg %}" alt="" class="svg">
+            </div>
+          </div>
+          <div class="tabContent js-tab2">
+            <div class="imgWrapper">
+              <img src="{% image_path Sutturah_specimen_2.svg %}" alt="" class="svg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fontFamilyDetailAbout familyBg linkedWithFontFamilyDetailNavigation" id="font-family-about">
+    <div class="inner">
+      <div class="header">
+        <h2>about sutturah</h2>
+      </div>
+      <div class="halvesCols" itemprop="description">
+        <div class="halfCol">
+          <p>
+          Sutturah is a display font intended for posters and display
+          environments demanding high visual impact. Originating from an
+          exploration of new, radical text patterns, the font combines highly
+          detailed and constructed shapes with a script-flavouring. The design
+          brings together varied influences – from gothic Fraktur to the
+          ultrablack display, and high-contrast wood types. Sutturah is
+          informal and irreverent in its visual style.
+          </p>
+        </div>
+        <div class="halfCol">
+          <p>
+          Its strong character goes beyond the accepted conventions of
+          letter-shape construction, quickly catching the eye and surprising
+          the reader. Its personality allows for the creation of stunning
+          pieces of design without the need of any other elements – a single
+          word in Sutturah can be worth a thousand images! Extra ligatures and
+          swashes provide the designer even more possibilities to experiment
+          with and add to the fun of using the typeface.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fontFamilyDetailAward linkedWithFontFamilyDetailNavigation" id="font-family-awards">
+  <div class="inner">
+    <div class="header">
+      <h2>awards</h2>
+    </div>
+
+    <div class="awardsWraper onFontFamilyDetail">
+      <div class="inner">
+        {% award "year": 2012, "logo": "Award-logo_Typographica_2x.png", "width": 70, "height": 70 %}
+        Typographica’s Best of
+        {% endaward %}
+
+        {% award "year": 2013, "logo": "Award-logo_CommunicationArts.svg" %}
+        Communication Arts Typographic Annual
+        {% endaward %}
+
+        {% award "year": 2012, "logo": "Award-logo_TDC2.svg" %}
+        Certificate of Excellence<br> in Type Design
+        {% endaward %}
+
+        {% award "year": 2012, "logo": "Award-logo_Granshan_2x.png", "width": 70, "height": 70 %}
+        Second prize<br> Granshan (Display)
+        {% endaward %}
+      </div>
+      <div class="controls">
+        <a href="#prev" class="slideLeftLink" style="display: none;">
+          <i class="ico arrowLeft"></i>
+          <span class="text">Prev</span>
+        </a>
+        <a href="#next" class="slideRightLink" style="display: none;">
+          <i class="ico arrowRight"></i>
+          <span class="text">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="linkedWithFontFamilyDetailNavigation" id="font-family-testimonials">
+  <div class="testimonialAccordion onFontFamilyDetail">
+    <div class="inner">
+      {% testimonial "i": 1, "active": true, "author": "Nicole Dotin (Process Type Foundry)", "for": "for Typographica", "logo": "Testimonial-logo_Typographica_2x.png", "width": 84, "height": 100 %}
+      “On the one hand, it’s jovial, overstuffed, and good-natured. On the other, it’s got a taste for fast cars and loose women.”
+      {% endtestimonial %}
+
+      {% testimonial "i": 2, "author": "Marian Bantjes" %}
+      “I love this! My highest compliment: envy.”
+      {% endtestimonial %}
+
+      {% testimonial "i": 3, "author": "Nicole Dotin (Process Type Foundry)", "for": "for Typographica", "logo": "Testimonial-logo_Typographica_2x.png", "width": 84, "height": 100 %}
+      “Let me get the obvious out of the way. Sutturah […] isn’t versatile or a workhorse. It’s not ideal for setting small text or many of the other prized descriptors lavished on typeface designs.“
+      {% endtestimonial %}
+    </div>
+  </div>
+</div>
+
+<!-- include font tester in this section -->
+{% font_tester %}
+
+<div class="fontStylesSection linkedWithFontFamilyDetailNavigation" id="font-family-styles">
+  <h2>Styles</h2>
+  <div class="inner js-fontStyleItemKinetic">
+    <div class="fontStyleItemWrapper">
+      <div class="inner">
+        <div class="fontStyleItem">
+          <div class="header">
+            <div class="title">latin</div>
+            <div class="availableLanguagesLabel js-languagePopover">
+              <span class="innerText">{% language_count_for latin %}</span>
+              <div class="popOverContent">
+                <a href="#" class="js-closePopover closeLink">
+                  <i class="ico close"></i>
+                  <span class="text">Close</span>
+                </a>
+                <div class="popOverTitle">Latin ({% language_count_for latin %})</div>
+                <div class="popOverText">
+                  {% languages_for_script latin %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <img src="{% image_path Sutturah_styles_1.svg %}" alt="" class="svg">
+          </div>
+        </div>
+        <div class="fontStyleItem">
+          <div class="header">
+            <div class="title">cyrillic</div>
+            <div class="availableLanguagesLabel js-languagePopover">
+              <span class="innerText">{% language_count_for cyrillic %}</span>
+              <div class="popOverContent">
+                <a href="#" class="js-closePopover closeLink">
+                  <i class="ico close"></i>
+                  <span class="text">Close</span>
+                </a>
+                <div class="popOverTitle">Cyrillic ({% language_count_for cyrillic %})</div>
+                <div class="popOverText">
+                  {% languages_for_script cyrillic %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <img src="{% image_path Sutturah_styles_2.svg %}" alt="" class="svg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hintSection">
+      <div class="large red solidButton desktop"> tap to move</div>
+      <div class="large red solidButton touchDevices"> Grab to move</div>
+    </div>
+    <div class="controls">
+      <a href="#prev" class="slideLeftLink" style="display: none;">
+        <i class="ico arrowLeft"></i>
+        <span class="text">Prev</span>
+      </a>
+      <a href="#next" class="slideRightLink">
+        <i class="ico arrowRight"></i>
+        <span class="text">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="fontStylesHighlights linkedWithFontFamilyDetailNavigation" id="font-family-highlights">
+  <div class="inner">
+    <div class="header">
+      <h2>highlights</h2>
+    </div>
+    <div class="cols">
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Sutturah_highlights_1.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Sweet curves, huh? Swashed alternates in&nbsp;both Latin and Cyrillic!
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Sutturah_highlights_2.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Contextual alternates allow for better flow so your letters never lose touch
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Sutturah_highlights_3.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            Mhh, those ligatures! They are so nice that we decided to keep them on at all time
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="highlightItem">
+          <div class="image">
+            <img src="{% image_path Sutturah_highlights_4.svg %}" alt="" class="svg">
+          </div>
+          <div class="text">
+            With extended language support Sutturah helps you start a revolution around the world
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="fontStylesOpentypeFeatures">
+  <div class="inner">
+    <div class="header">
+      <h2>opentype features</h2>
+      <div class="text"><a href="/help">See how to use</a> OpenType features in your favourite application.</div>
+    </div>
+    <div class="otfCols">
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Sutturah_features_1.svg %}" alt="" class="svg">
+          <div class="text">Ligatures (always switched on)</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Sutturah_features_3.svg %}" alt="" class="svg">
+          <div class="text">Contextual alternates (keep it switched on!)</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Sutturah_features_5.svg %}" alt="" class="svg">
+          <div class="text">Ordinals</div>
+        </div>
+      </div>
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Sutturah_features_2.svg %}" alt="" class="svg">
+          <div class="text">Stylistic alternates</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Sutturah_features_4.svg %}" alt="" class="svg">
+          <div class="text">Swashes</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Sutturah_features_6.svg %}" alt="" class="svg">
+          <div class="text">Basic superiors</div>
+        </div>
+      </div>
+    </div>
+    <div class="moreSection">
+      <a href="#hiddenOpentypeFeatures" class="button js-showMoreLink" data-showmoreselector="#hiddenOpentypeFeatures">
+      <i class="ico doubleArrowDown"></i>
+      Show more</a>
+    </div>
+    <div class="otfCols" style="display: none;" id="hiddenOpentypeFeatures">
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Sutturah_features_7.svg %}" alt="" class="svg">
+          <div class="text">Turkish/Azeri/Crimean Tatar</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Sutturah_features_9.svg %}" alt="" class="svg">
+          <div class="text">Contextual alternates (keep it switched on!)</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Sutturah_features_11.svg %}" alt="" class="svg">
+          <div class="text">Swashes</div>
+        </div>
+      </div>
+      <div class="halfCol">
+        <div class="otfItem">
+          <img src="{% image_path Sutturah_features_8.svg %}" alt="" class="svg">
+          <div class="text">Romanian/Moldavian</div>
+        </div>
+        <div class="otfItem">
+          <img src="{% image_path Sutturah_features_10.svg %}" alt="" class="svg">
+          <div class="text">Serbian/Macedonian forms (language feature or stylistic set 7)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- web performace will be added to this section -->
+{% web_performance %}
+The fonts have been screen-optimized and perform well in larger display sizes across all browsers which support @font-face CSS rule.
+{% endweb_performance %}
+
+<div class="fontFamilyDownloadSection linkedWithFontFamilyDetailNavigation" id="font-family-docs">
+  <div class="inner">
+    <div class="cols">
+      <div class="col1">
+        {% charsets_selector %}
+      </div>
+      <div class="gutter">
+        <img src="{% image_path separatorX.png %}" alt="" class="separatorX">
+      </div>
+      <div class="col2">
+        <div class="pdfSpeicmen">
+          <h2>pdf specimen</h2>
+          <div class="text">For you to print out</div>
+          <div class="bottom">
+            <!-- file path search for Sutturah_specimen.pdf in family files folder -->
+            <a href="{% file_path Sutturah_specimen.pdf %}" class="large button">
+              <i class="ico file"></i>
+              <span class="text">Download PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fontFamilyBuySection">
+  <div class="inner">
+    <!-- create button for family with lowest price available -->
+    {% buy_button %}
+    <div class="groupLinksWrapper">
+      <div class="inner">
+        <a href="#socialMediaButtonInBuySection" class="groupLink js-showMoreInBuySection">Share</a>
+        <a href="#hiddenQuestionForm" class="groupLink js-showMoreInBuySection">Ask  question</a>
+      </div>
+    </div>
+    <div class="socialMediaSection hiddenContent" id="socialMediaButtonInBuySection" style="display: none;">
+      <div class="inner">
+        <h2>Share</h2>
+        <div class="socialMediaLinks">
+          {% share_buttons https://www.behance.net/gallery/2738559/Sutturah %}
+        </div>
+      </div>
+    </div>
+    <div class="hiddenContent" id="hiddenQuestionForm" style="display: none;">
+        <div class="faqFormSection inFontFamilyBuySection">
+  <div class="inner">
+    <div class="header"><h2>ask us now</h2></div>
+    <!-- create contact form -->
+    {% ask_us_now_form %}
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+{% designers_info %}
