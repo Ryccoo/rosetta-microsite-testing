@@ -1,5 +1,6 @@
 Basic usage of liquid microsite system
 
+
 Tags :
 {% image_path [image name] %}
   - returns path to image, has two levels of search
